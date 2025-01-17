@@ -28,7 +28,15 @@ const DocumentsIdPage = async ({ params }: DocumentIdPageProps) => {
     throw new Error("Document not found!");
   }
 
-  return <Documents preLoadedDocument={preLoadedDocument} />;
+  return (
+    <>
+      <head>
+        <link rel="icon" href="/logo.svg" />
+        <title>Docs</title>
+      </head>
+      <Documents preLoadedDocument={preLoadedDocument} />
+    </>
+  );
 };
 
 export default DocumentsIdPage;

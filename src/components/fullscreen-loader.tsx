@@ -6,9 +6,15 @@ interface FullScreenLoaderProps {
 
 export const FullScreenLoader = ({ label }: FullScreenLoaderProps) => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-2">
-      <Loader2Icon className="size-10 text-muted-foreground animate-spin" />
-      {label && <p className="text-md text-muted-foreground">{label}</p>}
-    </div>
+    <>
+      <head>
+        <link rel="icon" href="/logo.svg" />
+        <title>Docs</title>
+      </head>
+      <div className="flex flex-col items-center justify-center min-h-screen gap-2">
+        <Loader2Icon className="size-10 text-muted-foreground animate-spin" />
+        {label && <p className="text-md text-muted-foreground">{label}</p>}
+      </div>
+    </>
   );
 };
